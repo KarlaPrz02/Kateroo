@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "kateroo",
+  "version": "${version}",
+
+  "name": "Kateroo",
+  "description": "",
+  "authors": [],
+  "contact": {},
+
+  "license": "All-Rights-Reserved",
+  "icon": "assets/kateroo/icon.png",
+
+  "environment": "client",
+  "entrypoints": {},
+
+
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+        "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
