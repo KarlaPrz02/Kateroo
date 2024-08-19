@@ -7,7 +7,7 @@ A mod that adds tweaks to the game
 
 ``disableBlockBreakingParticles`` - This setting allows you to disable block breaking particles rendering.
 
-## In develompent:
+## In development:
 
 ``disableCameraMovementwhenDamage`` - This setting allows you to disable the movement camera when you recive damage
 
