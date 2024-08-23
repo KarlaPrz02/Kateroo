@@ -13,5 +13,3 @@ A mod that adds tweaks to the game
 
 ``disableFireOnCam`` - This setting allows you to disable the fire from the first person camera
 
-sus
-
