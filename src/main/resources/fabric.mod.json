@@ -2,22 +2,26 @@
   "schemaVersion": 1,
   "id": "kateroo",
   "version": "${version}",
-
   "name": "Kateroo",
   "description": "",
   "authors": [],
-  "contact": {},
-
   "license": "All-Rights-Reserved",
   "icon": "assets/kateroo/icon.png",
-
   "environment": "client",
-  "entrypoints": {},
-
-
+  "entrypoints": {
+    "client": [
+      "me.kat.kateroo.client.KaterooBaseClient"
+    ],
+    "modmenu": [
+      "me.kat.kateroo.client.config.KaterooModMenu"
+    ]
+  },
+  "mixins": [
+    "kateroo.mixins.json"
+  ],
   "depends": {
     "fabricloader": ">=${loader_version}",
-        "fabric": "*",
+    "fabric": "*",
     "minecraft": "${minecraft_version}"
   }
 }

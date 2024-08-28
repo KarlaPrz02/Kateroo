@@ -1,0 +1,14 @@
+{
+  "option.kateroo.noLavaFog": "No Lava Fog",
+  "option.kateroo.noLavaFog.tooltip": "Removes lava fog when the camera is submerged in lava.",
+
+  "option.kateroo.disableBlockBreakingParticles": "Disable block breaking Particles",
+  "option.kateroo.disableBlockBreakingParticles.tooltip": "Disables block breaking particles when breaking blocks.",
+
+  "option.kateroo.disableCameraMovementWhenDamage": "Disable camera movement when damage",
+  "option.kateroo.disableCameraMovementWhenDamage.tooltip": "Disables camera movement when taking damage.",
+
+  "option.kateroo.disableFireOnCam": "Disable fire on camera",
+  "option.kateroo.disableFireOnCam.tooltip": "Disables fire overlay when the player is on fire."
+
+}
