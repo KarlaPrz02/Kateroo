@@ -1,0 +1,21 @@
+%minedCount% UwU!
+%playerName%, has picado %minedCount% bloques :0
+¿Quién es mi gata madrileña favorita? :3
+Son las %daytime% y acabas de llegar a %minedCount% bloques minados. Piénsalo
+¿Cuántos bloques has minado? :0
+Waos, ya has picado %minedCount% bloques. ¡Sigue así! :3
+Genial, %playerName%, Has alcanzado %minedCount% bloques picados
+%playerName%, llevas %minedCount% bloques minados, ¿ya descansaste? :3
+Son las %daytime%, y ya has minado %minedCount% bloques. ¡Eso es dedicación!
+Buen perímetro, supongo...
+UwU, %playerName%, %minedCount% bloques ya. ¡Eres imparable!
+¡Ya van %minedCount% bloques! ¿Alguien necesita descanso, verdad, %playerName%? :P
+%playerName%, llevas %minedCount% bloques. ¡Estás on fire! (pero no literalmente, espero...)
+Has alcanzado los %minedCount% bloques. ¡Qué máquina eres, %playerName%!
+%minedCount% bloques y contando... ¡No te detengas, %playerName%!
+Son las %daytime%, y ya llevas %minedCount% bloques picados. ¡Qué ritmo!
+%playerName%, ¡estás a tope! %minedCount% bloques, ¡wow!
+¿Quién diría que %playerName% ya ha minado %minedCount% bloques? ¡Eres una leyenda!
+%playerName%, ¡has picado %minedCount% bloques! ¡Esto es de locos!
+Llevas %minedCount% bloques, %playerName%. ¿Seguro que no eres un robot? :O
+¡%minedCount% bloques! %playerName%, ¡sigues imparable!

@@ -14,6 +14,7 @@ public class KaterooModMenu implements ModMenuApi {
     public static final BooleanOption disableBlockBreakingParticles    = new BooleanOption("disableBlockBreakingParticles", false);
     public static final BooleanOption disableCameraMovementWhenDamage  = new BooleanOption("disableCameraMovementWhenDamage", false);
     public static final BooleanOption disableFireOnCam                 = new BooleanOption("disableFireOnCam", false);
+    public static final BooleanOption miningRewardDrops                = new BooleanOption("miningRewardDrops", false);
 
     @Override
     public ConfigScreenFactory<?> getModConfigScreenFactory() {
@@ -25,6 +26,7 @@ public class KaterooModMenu implements ModMenuApi {
             renderingCategory.addEntry(disableBlockBreakingParticles.asConfigEntry(builder));
             renderingCategory.addEntry(disableCameraMovementWhenDamage.asConfigEntry(builder));
             renderingCategory.addEntry(disableFireOnCam.asConfigEntry(builder));
+            renderingCategory.addEntry(miningRewardDrops.asConfigEntry(builder));
 
             return builder.build();
         };

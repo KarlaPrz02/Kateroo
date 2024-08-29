@@ -18,8 +18,12 @@ public class ConfigIO {
 
         synchronized (saveFile) {
             try {
-                if (!saveFile.exists() && (!saveFile.getParentFile().mkdirs() || !saveFile.createNewFile())) {
-                    throw new IOException("Unable to create config save data file");
+                if (!saveFile.exists()) {
+                    saveFile.getParentFile().mkdirs();
+                    saveFile.createNewFile();
+                    if (!saveFile.exists()) {
+                        return false;
+                    }
                 }
 
                 FileWriter writer = new FileWriter(saveFile);

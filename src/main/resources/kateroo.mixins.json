@@ -6,7 +6,8 @@
   "mixins": [
   ],
   "client": [
-    "InGameOverlayRendererMixin"
+    "InGameOverlayRendererMixin",
+    "InGameHudMixin"
   ],
   "injectors": {
     "defaultRequire": 1
