@@ -6,6 +6,7 @@
   "mixins": [
   ],
   "client": [
+    "InGameOverlayRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -10,10 +10,10 @@ public class KaterooModMenu implements ModMenuApi {
 
     private static final String RENDERING_CATEGORY_TITLE = "category.kateroo.rendering";
 
-    private static final BooleanOption noLavaFog                        = new BooleanOption("noLavaFog", false);
-    private static final BooleanOption disableBlockBreakingParticles    = new BooleanOption("disableBlockBreakingParticles", false);
-    private static final BooleanOption disableCameraMovementWhenDamage  = new BooleanOption("disableCameraMovementWhenDamage", false);
-    private static final BooleanOption disableFireOnCam                 = new BooleanOption("disableFireOnCam", false);
+    public static final BooleanOption noLavaFog                        = new BooleanOption("noLavaFog", false);
+    public static final BooleanOption disableBlockBreakingParticles    = new BooleanOption("disableBlockBreakingParticles", false);
+    public static final BooleanOption disableCameraMovementWhenDamage  = new BooleanOption("disableCameraMovementWhenDamage", false);
+    public static final BooleanOption disableFireOnCam                 = new BooleanOption("disableFireOnCam", false);
 
     @Override
     public ConfigScreenFactory<?> getModConfigScreenFactory() {
