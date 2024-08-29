@@ -13,4 +13,4 @@ A mod that adds tweaks to the game
 
 ## Dependencies:
 
-This mod requires ModMenu to work and to be configured. Please visit https://github.com/TerraformersMC/ModMenu for download it
+This mod requires ModMenu to work and configure it. Please visit https://github.com/TerraformersMC/ModMenu for download it
