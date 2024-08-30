@@ -10,8 +10,13 @@
 
   "option.kateroo.disableFireOnCam": "Disable fire on camera",
   "option.kateroo.disableFireOnCam.tooltip": "Disables fire overlay when the player is on fire.",
+
   "option.kateroo.disableSlimeBlockPlayerMovement": "Disable Slime bounce",
   "option.kateroo.disableSlimeBlockPlayerMovement.tooltip": "Disable Slime bounce",
+
+  "option.kateroo.miningRewardDrops": "Mining reward drops",
+  "option.kateroo.miningRewardDrops.tooltip": "Each 30k blocks mined, you will receive a reward.",
+
   "category.kateroo.rendering": "Render",
   "category.kateroo.player": "Player"
 
