@@ -36,4 +36,9 @@ public class KaterooModMenu implements ModMenuApi {
             return builder.build();
         };
     }
+
+    @Override
+    public String getModId() {
+        return "kateroo";
+    }
 }
