@@ -9,6 +9,10 @@
   "option.kateroo.disableCameraMovementWhenDamage.tooltip": "Disables camera movement when taking damage.",
 
   "option.kateroo.disableFireOnCam": "Disable fire on camera",
-  "option.kateroo.disableFireOnCam.tooltip": "Disables fire overlay when the player is on fire."
+  "option.kateroo.disableFireOnCam.tooltip": "Disables fire overlay when the player is on fire.",
+  "option.kateroo.disableSlimeBlockPlayerMovement": "Disable Slime bounce",
+  "option.kateroo.disableSlimeBlockPlayerMovement.tooltip": "Disable Slime bounce",
+  "category.kateroo.rendering": "Render",
+  "category.kateroo.player": "Player"
 
 }

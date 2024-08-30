@@ -7,7 +7,8 @@
   ],
   "client": [
     "InGameOverlayRendererMixin",
-    "InGameHudMixin"
+    "InGameHudMixin",
+    "SlimeBlockMixin"
   ],
   "injectors": {
     "defaultRequire": 1
