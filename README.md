@@ -1,5 +1,5 @@
 # Kateroo
-A meowtastic mod that adds tweaks to the game
+A meowtastic mod for 1.15.2 that adds tweaks to the game
 
 ## Render options:
 
