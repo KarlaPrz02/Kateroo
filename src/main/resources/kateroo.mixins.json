@@ -6,8 +6,10 @@
   "mixins": [
   ],
   "client": [
-    "InGameOverlayRendererMixin",
+    "CameraMixin",
+    "GameRendererMixin",
     "InGameHudMixin",
+    "InGameOverlayRendererMixin",
     "SlimeBlockMixin"
   ],
   "injectors": {
