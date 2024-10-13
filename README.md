@@ -4,6 +4,8 @@ A meowtastic mod that adds tweaks to the game
 ## Render options:
 
 ``disableFireOnCam`` - This setting allows you to disable the fire from the first person camera
+``noLavaFog`` - This setting disable the fog under lava
+``disableCameraMovementOnDamage`` - This setting allows you to disable the camera movement when the player hurts
 
 ## Player options
 
