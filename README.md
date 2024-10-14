@@ -1,13 +1,15 @@
 # Kateroo
-A meowtastic mod that adds tweaks to the game
+A meowtastic mod for 1.15.2 that adds tweaks to the game
 
 ## Render options:
 
-``disableFireOnCam`` - This setting allows you to disable the fire from the first person camera
+- ``disableFireOnCam`` - This setting allows you to disable the fire from the first person camera
+- ``noLavaFog`` - This setting disable the fog under lava
+- ``disableCameraMovementOnDamage`` - This setting allows you to disable the camera movement when the player hurts
 
 ## Player options
 
-``disableSlimeBounce`` - This setting allows you to disable the slime bouncing when player walks on slime
+- ``disableSlimeBounce`` - This setting allows you to disable the slime bouncing when player walks on slime
 
 ## Dependencies:
 
