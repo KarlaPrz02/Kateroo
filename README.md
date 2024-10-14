@@ -23,5 +23,5 @@ This mod requires ModMenu and Cloth Config to work and configure it. Please visi
 
 ## Credits:
 
-- KimoVoid for the original idea of sidebar feature (https://github.com/kimoVoid)
+- kimoVoid for the original idea of sidebar feature (https://github.com/kimoVoid)
 - PauRealm for teach me Java (https://github.com/luzmimosa)
