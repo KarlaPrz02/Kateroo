@@ -5,6 +5,7 @@ import me.kat.kateroo.client.config.KaterooModMenu;
 import net.minecraft.client.gui.hud.InGameHud;
 import net.minecraft.scoreboard.ScoreboardObjective;
 import net.minecraft.scoreboard.ScoreboardPlayerScore;
+import org.jetbrains.annotations.NotNull;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -15,7 +16,7 @@ import java.util.List;
 @Mixin(InGameHud.class)
 public class InGameHudMixin {
     @Inject(method = "renderScoreboardSidebar", at = @At(value = "INVOKE", target = "Ljava/util/List;size()I", shift = At.Shift.BEFORE), cancellable = true)
-    private void addTotal(ScoreboardObjective scoreboardObjective, CallbackInfo ci, @Local List<ScoreboardPlayerScore> list) {
+    private void addTotal(ScoreboardObjective scoreboardObjective, CallbackInfo ci, @Local @NotNull List<ScoreboardPlayerScore> list) {
         int total = 0;
         for (ScoreboardPlayerScore score : list) {
             total += score.getScore();
@@ -24,10 +25,6 @@ public class InGameHudMixin {
         ScoreboardPlayerScore totalScore = new ScoreboardPlayerScore(scoreboardObjective.getScoreboard(), scoreboardObjective, "Total");
         totalScore.setScore(total);
         list.add(totalScore);
-
-        if (KaterooModMenu.totalSidebar.getValue()) {
-            ci.cancel();
-        }
     }
 }
 

@@ -18,7 +18,6 @@ public class KaterooModMenu implements ModMenuApi {
     public static final BooleanOption disableCameraMovementWhenDamage  = new BooleanOption("disableCameraMovementWhenDamage", false);
     public static final BooleanOption disableFireOnCam                 = new BooleanOption("disableFireOnCam", false);
     public static final BooleanOption disableSlimeBlockPlayerMovement  = new BooleanOption("disableSlimeBlockPlayerMovement", false);
-    public static final BooleanOption totalSidebar                     = new BooleanOption("TotalSidebar", true);
 
     @Override
     public ConfigScreenFactory<?> getModConfigScreenFactory() {
@@ -33,7 +32,6 @@ public class KaterooModMenu implements ModMenuApi {
             renderingCategory.addEntry(disableCameraMovementWhenDamage.asConfigEntry(builder));
             renderingCategory.addEntry(disableFireOnCam.asConfigEntry(builder));
             playerCategory.addEntry(disableSlimeBlockPlayerMovement.asConfigEntry(builder));
-            extrasCategory.addEntry(totalSidebar.asConfigEntry(builder));
 
             return builder.build();
         };

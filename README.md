@@ -1,6 +1,10 @@
 # Kateroo
 A meowtastic mod for 1.15.2 that adds tweaks to the game
 
+## Miscellaneous:
+
+- Extension for vanilla scoreboard sidebar. Add on top of the sidebar a total of all players on scoreboard
+
 ## Render options:
 
 - ``disableFireOnCam`` - This setting allows you to disable the fire from the first person camera
@@ -14,4 +18,4 @@ A meowtastic mod for 1.15.2 that adds tweaks to the game
 
 ## Dependencies:
 
-This mod requires ModMenu and Cloth Config to work and configure it. Please visit https://github.com/TerraformersMC/ModMenu and https://github.com/shedaniel/cloth-config for download them
+This mod requires ModMenu to work and configure it. Please visit https://github.com/TerraformersMC/ModMenu for download it

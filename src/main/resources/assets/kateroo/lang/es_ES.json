@@ -1,0 +1,24 @@
+{
+  "option.kateroo.noLavaFog": "No Niebla en Lava",
+  "option.kateroo.noLavaFog.tooltip": "Desactiva la niebla de la camara de primera persona cuando estás debajo de lava.",
+
+  "option.kateroo.disableBlockBreakingParticles": "No particulas de bloques",
+  "option.kateroo.disableBlockBreakingParticles.tooltip": "Desactiva particulas al romper bloques",
+
+  "option.kateroo.disableCameraMovementWhenDamage": "Desactiva movimiento de camara cuando daño",
+  "option.kateroo.disableCameraMovementWhenDamage.tooltip": "Desactiva el movimiento de camara cuando el jugador recibe daño.",
+
+  "option.kateroo.disableFireOnCam": "Desactiva fuego en camara",
+  "option.kateroo.disableFireOnCam.tooltip": "Desactiva el overlay de fuego en la camara de primera persona.",
+
+  "option.kateroo.disableSlimeBlockPlayerMovement": "Desactiva rebote del slime",
+  "option.kateroo.disableSlimeBlockPlayerMovement.tooltip": "Desactiva rebote del slime",
+
+  "option.kateroo.totalSidebar": "Sidebar Total",
+  "option.kateroo.totalSidebar.tooltip": "Habilita la suma total de la scoreboard actual",
+
+  "category.kateroo.rendering": "Render",
+  "category.kateroo.player": "Player",
+  "category.kateroo.extras": "Extras"
+
+}
