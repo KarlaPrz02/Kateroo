@@ -4,6 +4,9 @@ A meowtastic mod for 1.15.2 that adds tweaks to the game
 ## Miscellaneous:
 
 - Extension for vanilla scoreboard sidebar. Add on top of the sidebar a total of all players on scoreboard.
+  
+![Captura de pantalla 2024-10-14 213618](https://github.com/user-attachments/assets/60b81638-b96f-4331-a05e-cd1a91147b3e)
+
 
 ## Render options:
 
