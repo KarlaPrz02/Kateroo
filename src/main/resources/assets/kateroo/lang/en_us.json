@@ -14,10 +14,11 @@
   "option.kateroo.disableSlimeBlockPlayerMovement": "Disable Slime bounce",
   "option.kateroo.disableSlimeBlockPlayerMovement.tooltip": "Disable Slime bounce",
 
-  "option.kateroo.miningRewardDrops": "Mining reward drops",
-  "option.kateroo.miningRewardDrops.tooltip": "Each 30k blocks mined, you will receive a reward.",
+  "option.kateroo.totalSidebar": "Sidebar Total",
+  "option.kateroo.totalSidebar.tooltip": "Enable total on the top of the current sidebar",
 
   "category.kateroo.rendering": "Render",
-  "category.kateroo.player": "Player"
+  "category.kateroo.player": "Player",
+  "category.kateroo.extras": "Extras"
 
 }

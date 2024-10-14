@@ -13,9 +13,6 @@
   "icon": "assets/kateroo/icon.png",
   "environment": "client",
   "entrypoints": {
-    "client": [
-      "me.kat.kateroo.client.KaterooBaseClient"
-    ],
     "modmenu": [
       "me.kat.kateroo.client.config.KaterooModMenu"
     ]

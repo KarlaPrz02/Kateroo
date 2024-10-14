@@ -1,32 +1,34 @@
 package me.kat.kateroo.client.mcwrapper.mixin;
 
-import me.kat.kateroo.client.feature.KatMiningRewardManager;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.gui.DrawableHelper;
+import com.llamalad7.mixinextras.sugar.Local;
+import me.kat.kateroo.client.config.KaterooModMenu;
 import net.minecraft.client.gui.hud.InGameHud;
-import org.spongepowered.asm.mixin.Final;
+import net.minecraft.scoreboard.ScoreboardObjective;
+import net.minecraft.scoreboard.ScoreboardPlayerScore;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+import java.util.List;
+
 @Mixin(InGameHud.class)
-public abstract class InGameHudMixin extends DrawableHelper {
+public class InGameHudMixin {
+    @Inject(method = "renderScoreboardSidebar", at = @At(value = "INVOKE", target = "Ljava/util/List;size()I", shift = At.Shift.BEFORE), cancellable = true)
+    private void addTotal(ScoreboardObjective scoreboardObjective, CallbackInfo ci, @Local List<ScoreboardPlayerScore> list) {
+        int total = 0;
+        for (ScoreboardPlayerScore score : list) {
+            total += score.getScore();
+        }
 
-    @Shadow @Final private MinecraftClient client;
+        ScoreboardPlayerScore totalScore = new ScoreboardPlayerScore(scoreboardObjective.getScoreboard(), scoreboardObjective, "Total");
+        totalScore.setScore(total);
+        list.add(totalScore);
 
-    @Inject(
-            method = "render",
-            at = @At(
-                    value = "INVOKE",
-                    target = "Lcom/mojang/blaze3d/systems/RenderSystem;color4f(FFFF)V",
-                    ordinal = 0,
-                    shift = At.Shift.AFTER
-            )
-    )
-    private void injectKatMiningReward(CallbackInfo ci) {
-        KatMiningRewardManager.render(this.client, this.getBlitOffset());
+        if (KaterooModMenu.totalSidebar.getValue()) {
+            ci.cancel();
+        }
     }
-
 }
+
+
