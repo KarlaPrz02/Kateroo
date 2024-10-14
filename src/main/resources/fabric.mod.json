@@ -9,7 +9,7 @@
     "homepage": "https://modrinth.com/mod/kateroo",
     "issues": "https://github.com/KarlaPrz02/Kateroo"
   },
-  "license": "All-Rights-Reserved",
+  "license": "MIT License",
   "icon": "assets/kateroo/icon.png",
   "environment": "client",
   "entrypoints": {
