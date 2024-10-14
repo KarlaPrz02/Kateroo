@@ -6,6 +6,7 @@ A meowtastic mod for 1.15.2 that adds tweaks to the game
 - ``disableFireOnCam`` - This setting allows you to disable the fire from the first person camera
 - ``noLavaFog`` - This setting disable the fog under lava
 - ``disableCameraMovementOnDamage`` - This setting allows you to disable the camera movement when the player hurts
+- ``disableBlockBreakingParticles`` - This setting allows you to disable rendering of block breaking particles.
 
 ## Player options
 
