@@ -3,8 +3,12 @@
   "id": "kateroo",
   "version": "${version}",
   "name": "Kateroo",
-  "description": "",
-  "authors": [],
+  "description": "A fabric mod for 1.15.2 that adds tweaks to the game to enchance technical players experience",
+  "authors": ["KatPrz02"],
+  "contact": {
+    "homepage": "https://modrinth.com/mod/kateroo",
+    "issues": "https://github.com/KarlaPrz02/Kateroo"
+  },
   "license": "All-Rights-Reserved",
   "icon": "assets/kateroo/icon.png",
   "environment": "client",
