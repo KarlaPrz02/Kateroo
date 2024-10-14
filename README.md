@@ -21,7 +21,7 @@ A meowtastic mod for 1.15.2 that adds tweaks to the game
 
 ## Dependencies:
 
-This mod requires ModMenu to work and configure it. Please visit https://github.com/TerraformersMC/ModMenu for download it.
+This mod requires ModMenu and Cloth Config to work and configure it. Please visit https://github.com/TerraformersMC/ModMenu and https://github.com/shedaniel/cloth-config for download them.
 
 ## Credits:
 
