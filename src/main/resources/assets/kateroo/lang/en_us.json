@@ -14,8 +14,8 @@
   "option.kateroo.disableSlimeBlockPlayerMovement": "Disable Slime bounce",
   "option.kateroo.disableSlimeBlockPlayerMovement.tooltip": "Disable Slime bounce",
 
-  "option.kateroo.totalSidebar": "Sidebar Total",
-  "option.kateroo.totalSidebar.tooltip": "Enable total on the top of the current sidebar",
+  "option.kateroo.disableHoneyBlockPlayerMovement": "Disable Honey block movement",
+  "option.kateroo.disableHoneyBlockPlayerMovement.tooltip": "Disable Honey block movement",
 
   "category.kateroo.rendering": "Render",
   "category.kateroo.player": "Player",

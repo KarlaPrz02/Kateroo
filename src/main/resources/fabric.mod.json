@@ -15,6 +15,9 @@
   "entrypoints": {
     "modmenu": [
       "me.kat.kateroo.client.config.KaterooModMenu"
+    ],
+    "client": [
+      "me.kat.kateroo.client.KaterooClient"
     ]
   },
   "mixins": [

@@ -3,6 +3,7 @@ package me.kat.kateroo.client.mcwrapper.mixin;
 import me.kat.kateroo.client.config.KaterooModMenu;
 import net.minecraft.block.SlimeBlock;
 import net.minecraft.entity.Entity;
+import net.minecraft.util.math.Vec3d;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -32,6 +33,16 @@ public class SlimeBlockMixin {
     private void onMethod21847(CallbackInfo ci) {
         if (KaterooModMenu.disableSlimeBlockPlayerMovement.getValue()) {
             ci.cancel();
+        }
+    }
+
+    @Redirect(
+            method = "onSteppedOn",
+            at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/Entity;setVelocity(Lnet/minecraft/util/math/Vec3d;)V")
+    )
+    private void cancelSetVelocity(Entity instance, Vec3d velocity) {
+        if (!KaterooModMenu.disableHoneyBlockPlayerMovement.getValue()) {
+            instance.setVelocity(velocity);
         }
     }
 }
