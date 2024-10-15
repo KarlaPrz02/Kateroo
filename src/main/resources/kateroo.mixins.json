@@ -4,6 +4,8 @@
   "package": "me.kat.kateroo.client.mcwrapper.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "HoneyBlockMixin",
+    "MixinSlimeBlock"
   ],
   "client": [
     "BlockMixin",

@@ -17,6 +17,7 @@ public class KaterooModMenu implements ModMenuApi {
     public static final BooleanOption disableBlockBreakingParticles    = new BooleanOption("disableBlockBreakingParticles", false);
     public static final BooleanOption disableCameraMovementWhenDamage  = new BooleanOption("disableCameraMovementWhenDamage", false);
     public static final BooleanOption disableFireOnCam                 = new BooleanOption("disableFireOnCam", false);
+    public static final BooleanOption disableSlimeBlockBounce          = new BooleanOption("disableSlimeBlockBounce", false);
     public static final BooleanOption disableSlimeBlockPlayerMovement  = new BooleanOption("disableSlimeBlockPlayerMovement", false);
     public static final BooleanOption disableHoneyBlockPlayerMovement  = new BooleanOption("disableHoneyBlockPlayerMovement", false);
 
@@ -33,6 +34,7 @@ public class KaterooModMenu implements ModMenuApi {
             renderingCategory.addEntry(disableCameraMovementWhenDamage.asConfigEntry(builder));
             renderingCategory.addEntry(disableFireOnCam.asConfigEntry(builder));
 
+            playerCategory.addEntry(disableSlimeBlockBounce.asConfigEntry(builder));
             playerCategory.addEntry(disableSlimeBlockPlayerMovement.asConfigEntry(builder));
             playerCategory.addEntry(disableHoneyBlockPlayerMovement.asConfigEntry(builder));
 

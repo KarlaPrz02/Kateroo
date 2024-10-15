@@ -17,7 +17,7 @@ public class SlimeBlockMixin {
             at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/Entity;bypassesSteppingEffects()Z")
     )
     private boolean handleSlimeConfig(Entity instance){
-        if (KaterooModMenu.disableSlimeBlockPlayerMovement.getValue()) {
+        if (KaterooModMenu.disableSlimeBlockBounce.getValue()) {
             return true;
         } else {
             return instance.bypassesSteppingEffects();
@@ -31,18 +31,8 @@ public class SlimeBlockMixin {
 
     )
     private void onMethod21847(CallbackInfo ci) {
-        if (KaterooModMenu.disableSlimeBlockPlayerMovement.getValue()) {
+        if (KaterooModMenu.disableSlimeBlockBounce.getValue()) {
             ci.cancel();
-        }
-    }
-
-    @Redirect(
-            method = "onSteppedOn",
-            at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/Entity;setVelocity(Lnet/minecraft/util/math/Vec3d;)V")
-    )
-    private void cancelSetVelocity(Entity instance, Vec3d velocity) {
-        if (!KaterooModMenu.disableHoneyBlockPlayerMovement.getValue()) {
-            instance.setVelocity(velocity);
         }
     }
 }
