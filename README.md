@@ -17,9 +17,11 @@ A meowtastic mod for 1.15.2 that adds tweaks to the game
 
 - ``disableSlimeBounce`` - This setting allows you to disable the slime bouncing when player walks on slime.
 
-## Dependencies:
+## Dependency
 
-This mod requires ModMenu and Cloth Config to work and configure it. Please visit https://github.com/TerraformersMC/ModMenu and https://github.com/shedaniel/cloth-config for download them.
+> [!IMPORTANT]
+> This mod needs ModMenu and Cloth-Config to work.
+- Please visit https://github.com/TerraformersMC/ModMenu and https://github.com/shedaniel/cloth-config for download them.
 
 ## Credits:
 
