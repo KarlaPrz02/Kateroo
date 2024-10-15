@@ -11,8 +11,11 @@
   "option.kateroo.disableFireOnCam": "Disable fire on camera",
   "option.kateroo.disableFireOnCam.tooltip": "Disables fire overlay when the player is on fire.",
 
-  "option.kateroo.disableSlimeBlockPlayerMovement": "Disable Slime bounce",
-  "option.kateroo.disableSlimeBlockPlayerMovement.tooltip": "Disable Slime bounce",
+  "option.kateroo.disableSlimeBlockPlayerMovement": "Disable SlimeBlock player movement",
+  "option.kateroo.disableSlimeBlockPlayerMovement.tooltip": "Disable SlimeBlock player movement",
+
+  "option.kateroo.disableSlimeBlockBounce": "Disable Slime bounce",
+  "option.kateroo.disableSlimeBlockBounce.tooltip": "Disable Slime bounce",
 
   "option.kateroo.disableHoneyBlockPlayerMovement": "Disable Honey block movement",
   "option.kateroo.disableHoneyBlockPlayerMovement.tooltip": "Disable Honey block movement",
