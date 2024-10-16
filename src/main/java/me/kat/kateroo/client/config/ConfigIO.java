@@ -2,7 +2,8 @@ package me.kat.kateroo.client.config;
 
 import com.mojang.brigadier.StringReader;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
-import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.NbtCompound;
+import net.minecraft.nbt.NbtHelper;
 import net.minecraft.nbt.StringNbtReader;
 
 import java.io.*;
@@ -11,9 +12,9 @@ import java.util.function.Consumer;
 public class ConfigIO {
 
     private static final File saveFile = new File("config/kateroo/config.dat");
-    private static CompoundTag config = new CompoundTag();
+    private static NbtCompound config = new NbtCompound();
 
-    public static boolean saveConfig(CompoundTag tag) {
+    public static void saveConfig(NbtCompound tag) {
         String stringConfig = tag.toString();
 
         synchronized (saveFile) {
@@ -22,7 +23,7 @@ public class ConfigIO {
                     saveFile.getParentFile().mkdirs();
                     saveFile.createNewFile();
                     if (!saveFile.exists()) {
-                        return false;
+                        return;
                     }
                 }
 
@@ -30,9 +31,7 @@ public class ConfigIO {
                 writer.write(stringConfig);
                 writer.close();
 
-                return true;
             } catch (IOException e) {
-                return false;
             }
         }
     }
@@ -46,20 +45,21 @@ public class ConfigIO {
                     sb.append((char) i);
                 }
 
-                config = new StringNbtReader(new StringReader(sb.toString())).parseCompoundTag();
+                config = StringNbtReader.parse(new StringReader(sb.toString()));
             } catch (IOException | CommandSyntaxException e) {
-                config = new CompoundTag();
+                config = new NbtCompound();
             }
         }
     }
 
-    public static CompoundTag getConfig() {
+    public static NbtCompound getConfig() {
         return config;
     }
 
-    public static void getAndSaveConfig(Consumer<CompoundTag> action) {
+    public static void getAndSaveConfig(Consumer<NbtCompound> action) {
         action.accept(config);
         saveConfig(config);
     }
 
 }
+

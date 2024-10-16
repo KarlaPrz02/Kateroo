@@ -3,7 +3,7 @@ package me.kat.kateroo.client.config.options;
 import me.kat.kateroo.client.config.ConfigIO;
 import me.shedaniel.clothconfig2.api.AbstractConfigListEntry;
 import me.shedaniel.clothconfig2.api.ConfigBuilder;
-import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 
@@ -58,8 +58,8 @@ public abstract class BaseOption<T> {
         return this.defaultValue;
     }
 
-    protected abstract BiConsumer<String, T> getParser(CompoundTag config);
-    protected abstract Function<String, T> getReader(CompoundTag config);
+    protected abstract BiConsumer<String, T> getParser(NbtCompound config);
+    protected abstract Function<String, T> getReader(NbtCompound config);
     public    abstract AbstractConfigListEntry<T> asConfigEntry(ConfigBuilder builder);
 
 }

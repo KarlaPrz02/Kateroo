@@ -1,37 +1,65 @@
-package me.kat.kateroo.client.config.options;
+package me.kat.kateroo.client.config;
 
-import me.shedaniel.clothconfig2.api.AbstractConfigListEntry;
-import me.shedaniel.clothconfig2.api.ConfigBuilder;
-import net.minecraft.nbt.CompoundTag;
+import com.mojang.brigadier.StringReader;
+import com.mojang.brigadier.exceptions.CommandSyntaxException;
+import net.minecraft.nbt.NbtCompound;
+import net.minecraft.nbt.NbtHelper;
+import net.minecraft.nbt.StringNbtReader;
 
-import java.util.function.BiConsumer;
-import java.util.function.Function;
+import java.io.*;
+import java.util.function.Consumer;
 
-public class BooleanOption extends BaseOption<Boolean> {
+public class ConfigIO {
 
-    public BooleanOption(String name, boolean defaultValue) {
-        super(name, defaultValue);
+    private static final File saveFile = new File("config/kateroo/config.dat");
+    private static NbtCompound config = new NbtCompound();
+
+    public static void saveConfig(NbtCompound tag) {
+        String stringConfig = tag.toString();
+
+        synchronized (saveFile) {
+            try {
+                if (!saveFile.exists()) {
+                    saveFile.getParentFile().mkdirs();
+                    saveFile.createNewFile();
+                    if (!saveFile.exists()) {
+                        return;
+                    }
+                }
+
+                FileWriter writer = new FileWriter(saveFile);
+                writer.write(stringConfig);
+                writer.close();
+
+            } catch (IOException e) {
+            }
+        }
     }
 
-    @Override
-    protected BiConsumer<String, Boolean> getParser(CompoundTag config) {
-        return config::putBoolean;
+    public static void loadConfig() {
+        synchronized (saveFile) {
+            try (FileReader reader = new FileReader(saveFile)) {
+                StringBuilder sb = new StringBuilder();
+                int i;
+                while ((i = reader.read()) != -1) {
+                    sb.append((char) i);
+                }
+
+                config = StringNbtReader.parse(new StringReader(sb.toString()));
+            } catch (IOException | CommandSyntaxException e) {
+                config = new NbtCompound();
+            }
+        }
     }
 
-    @Override
-    protected Function<String, Boolean> getReader(CompoundTag config) {
-        return config::getBoolean;
+    public static NbtCompound getConfig() {
+        return config;
     }
 
-    @Override
-    public AbstractConfigListEntry<Boolean> asConfigEntry(ConfigBuilder builder) {
-        return builder.entryBuilder()
-                .startBooleanToggle(this.getTitle(), this.getValue())
-                .setDefaultValue(this.getDefaultValue())
-                .setTooltip(this.getTooltip())
-                .setSaveConsumer(this::setValue)
-                .build();
+    public static void getAndSaveConfig(Consumer<NbtCompound> action) {
+        action.accept(config);
+        saveConfig(config);
     }
-
 
 }
+

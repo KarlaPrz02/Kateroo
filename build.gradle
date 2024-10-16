@@ -24,14 +24,13 @@ repositories {
 
 dependencies {
     // To change the versions see the gradle.properties file
-    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    minecraft "com.mojang:minecraft:1.17.1"
     mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
     // Fabric API. This is technically optional, but you probably want it anyway.
-    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-
-    modImplementation("com.terraformersmc:modmenu:${project.modmenu_version}")
+    modImplementation "net.fabricmc.fabric-api:fabric-api:0.37.0+1.17"
+    modImplementation "com.terraformersmc:modmenu:2.0.0"
     modApi("me.shedaniel.cloth:config-2:2.14.2") {
         transitive(false)
     }
