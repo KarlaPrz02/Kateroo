@@ -13,7 +13,7 @@ public class ConfigIO {
     private static final File saveFile = new File("config/kateroo/config.dat");
     private static CompoundTag config = new CompoundTag();
 
-    public static boolean saveConfig(CompoundTag tag) {
+    public static void saveConfig(CompoundTag tag) {
         String stringConfig = tag.toString();
 
         synchronized (saveFile) {
@@ -22,7 +22,7 @@ public class ConfigIO {
                     saveFile.getParentFile().mkdirs();
                     saveFile.createNewFile();
                     if (!saveFile.exists()) {
-                        return false;
+                        return;
                     }
                 }
 
@@ -30,9 +30,7 @@ public class ConfigIO {
                 writer.write(stringConfig);
                 writer.close();
 
-                return true;
             } catch (IOException e) {
-                return false;
             }
         }
     }
