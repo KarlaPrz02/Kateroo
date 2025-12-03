@@ -12,6 +12,7 @@ public class ConfigIO {
 
     private static final File saveFile = new File("config/kateroo/config.dat");
     private static CompoundTag config = new CompoundTag();
+    private static boolean configLoaded = false;
 
     public static void saveConfig(CompoundTag tag) {
         String stringConfig = tag.toString();
@@ -52,12 +53,21 @@ public class ConfigIO {
     }
 
     public static CompoundTag getConfig() {
+        loadInitialConfigIfNeeded();
         return config;
     }
 
     public static void getAndSaveConfig(Consumer<CompoundTag> action) {
+        loadInitialConfigIfNeeded();
         action.accept(config);
         saveConfig(config);
+    }
+
+    private static void loadInitialConfigIfNeeded() {
+        if (!configLoaded) {
+            loadConfig();
+            configLoaded = true;
+        }
     }
 
 }
