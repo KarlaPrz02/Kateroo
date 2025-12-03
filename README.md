@@ -15,7 +15,9 @@ A meowtastic mod for 1.15.2 that adds tweaks to the game
 
 ## Player options
 
-- ``disableSlimeBounce`` - This setting allows you to disable the slime bouncing when player walks on slime.
+- ``disableSlimeBounce`` - This setting allows you to disable the slime bouncing when player walks on slime
+- ``disableHoneyblockMomevent`` - This setting allows you to disable the honey movement when player walks on it.
+- ``disableSlimeblockPlayerMovement`` - This setting prevents the slowing effect when stepping on slime.
 
 ## Dependency
 
